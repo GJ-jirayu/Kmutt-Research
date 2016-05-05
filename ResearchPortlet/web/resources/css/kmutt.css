@@ -1,0 +1,43 @@
+.kmutt_fieldset {
+    font-family: sans-serif;
+    padding-top: 5px
+}
+
+.kmutt_block {
+    border: 1px solid #FFC299;
+    background: #F9F9F9;
+    padding: 10px
+}
+.kmutt_section_table_filter {
+    border:0;
+    width:100%;
+    font-size: 13px
+}
+
+.kmutt_table_detail_block{
+    border: 0px solid #FFC299;
+    font-size:13px
+}
+
+.kmutt_require_field{
+    color: red;
+    font-size: 20px
+}
+
+.kmutt_lookup_field{
+    background-color:rgb(250, 250, 198);
+    width:350px
+}
+
+.kmutt_texarea{
+    width:500px
+}
+#breadcrumbs { display:none; }
+.ui-autocomplete-loading {
+    background: white url('../css/smoothness/images/ui-anim_basic_16x16.gif') right center no-repeat;
+}
+.aoe_small{width: 500px !important;}
+.aoe_width{width: 1000px !important;}
+.aui .modal{
+    left:30%
+}

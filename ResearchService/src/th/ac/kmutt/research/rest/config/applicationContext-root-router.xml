@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+ 
+	<bean id="root" class="org.restlet.ext.spring.SpringRouter">
+		<property name="attachments">
+			<map>
+			    <entry key="/researchGroup">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="researchGroupResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/utilizationType">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="utilizationTypeResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/publishType">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="publishTypeResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/position">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="positionResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/organization">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="organizationResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/country">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="countryResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/workType">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="workTypeResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/journalPapersType">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="journalPapersTypeResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/fundingResourcesType">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="fundingResourcesTypeResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/researcher">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="researcherResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/researcherGroup">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="researcherGroupResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/publishLevel">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="publishLevelResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/organizationExt">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="organizationExtResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/fundingResources">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="fundingResourcesResource" />
+					</bean>
+				</entry>
+				
+				<!--  Docs -->
+				<entry key="/researchProject">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="researchProjectResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/journalPapers">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="journalPapersResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/utilization">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="utilizationResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/copyright">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="copyRightResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/reward">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="rewardResource" />
+					</bean>
+				</entry>
+				
+				<entry key="/patent">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="patentResource" />
+					</bean>
+				</entry>
+			
+			   <entry key="/doctype">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="docTypeResource" />
+					</bean>
+				</entry>
+				
+				 <entry key="/userportal">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="userPortalResource" />
+					</bean>
+				</entry>
+				
+				
+				 <entry key="/docassign">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="docAssignMappingResource" />
+					</bean>
+				</entry>
+				
+				 <entry key="/title">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="titleResource" />
+					</bean>
+				</entry>
+					
+				<!-- 
+				<entry key="/userProfile">
+					<bean class="org.restlet.ext.spring.SpringFinder">
+						<lookup-method name="create"
+							bean="userProfileResource" />
+					</bean>
+				</entry>
+				 -->
+			</map>
+		</property>
+		<!--<property name="routes[2].template.variables[URI]">
+			<bean class="org.restlet.util.Variable">
+				<constructor-arg
+					ref="org.restlet.util.Variable.TYPE_URI_ALL" />
+			</bean>
+		</property>
+	--></bean>
+
+	<bean id="org.restlet.routing.Variable.TYPE_URI_ALL"
+		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean" />
+ 
+</beans>

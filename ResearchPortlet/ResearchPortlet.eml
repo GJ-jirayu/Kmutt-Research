@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true" jdk="1.7" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/../out/test/ResearchPortlet"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="Liferay Server" scope="PROVIDED"/>
+	<levels>
+		<level name="Liferay Server" value="application_server_libraries"/>
+		<level name="portlet" value="project"/>
+		<level name="lib ResearchPortlet" value="project"/>
+	</levels>
+</component>

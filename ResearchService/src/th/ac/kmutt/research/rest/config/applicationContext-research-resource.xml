@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+     
+ 	<bean id="researchGroupResource"
+		class="th.ac.kmutt.research.rest.resource.ResearchGroupResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="utilizationTypeResource"
+		class="th.ac.kmutt.research.rest.resource.UtilizationTypeResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="publishTypeResource"
+		class="th.ac.kmutt.research.rest.resource.PublishTypeResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="positionResource"
+		class="th.ac.kmutt.research.rest.resource.PositionResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="organizationResource"
+		class="th.ac.kmutt.research.rest.resource.OrganizationResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="countryResource"
+		class="th.ac.kmutt.research.rest.resource.CountryResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="workTypeResource"
+		class="th.ac.kmutt.research.rest.resource.WorkTypeResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="journalPapersTypeResource"
+		class="th.ac.kmutt.research.rest.resource.JournalPapersTypeResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="fundingResourcesTypeResource"
+		class="th.ac.kmutt.research.rest.resource.FundingResourcesTypeResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="researcherResource"
+		class="th.ac.kmutt.research.rest.resource.ResearcherResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="researcherGroupResource"
+		class="th.ac.kmutt.research.rest.resource.ResearcherGroupResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="publishLevelResource"
+		class="th.ac.kmutt.research.rest.resource.PublishLevelResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="organizationExtResource"
+		class="th.ac.kmutt.research.rest.resource.OrganizationExtResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="fundingResourcesResource"
+		class="th.ac.kmutt.research.rest.resource.FundingResourceResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<!--  Docs -->
+	  
+	<bean id="researchProjectResource"
+		class="th.ac.kmutt.research.rest.resource.ResearchProjectResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="journalPapersResource"
+		class="th.ac.kmutt.research.rest.resource.JournalPapersResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="utilizationResource"
+		class="th.ac.kmutt.research.rest.resource.UtilizationResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="copyRightResource"
+		class="th.ac.kmutt.research.rest.resource.CopyRightResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="rewardResource"
+		class="th.ac.kmutt.research.rest.resource.RewardResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="patentResource"
+		class="th.ac.kmutt.research.rest.resource.PatentResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="docTypeResource"
+		class="th.ac.kmutt.research.rest.resource.DocTypeResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="userPortalResource"
+		class="th.ac.kmutt.research.rest.resource.UserPortalResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	<bean id="docAssignMappingResource"
+		class="th.ac.kmutt.research.rest.resource.DocAssignMappingResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	<bean id="titleResource"
+		class="th.ac.kmutt.research.rest.resource.TitleResource"
+		scope="prototype"> 
+		<property name="xstream" ref="xstream"></property>
+	</bean>
+	
+	
+<!--  	
+	<bean id="userProfileResource"
+		class="com.gl.finwiz.core.userprofile.rest.resource.UserProfileResource"
+		scope="prototype">
+		<property name="xstream" ref="xstream"></property>
+	</bean> 
+	 -->  
+	
+</beans>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true" jdk="1.7" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/../out/test/ResearchService"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="Tomcat 7.0.57" scope="PROVIDED"/>
+	<levels>
+		<level name="Tomcat 7.0.57" value="application_server_libraries"/>
+		<level name="lib ResearchService" value="project"/>
+	</levels>
+</component>
