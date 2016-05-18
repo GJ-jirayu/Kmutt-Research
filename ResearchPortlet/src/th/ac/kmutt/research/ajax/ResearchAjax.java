@@ -68,9 +68,7 @@ public class ResearchAjax {
     static {
         bundle = ResourceBundle.getBundle("config");
     }
-
-    //private String ATTACH_PATH=bundle.getString("downloadPath");
-    private ResearchService researchService;
+  private ResearchService researchService;
 
     public ResearchAjax() {
         WebContext ctx = WebContextFactory.get();
