@@ -17,11 +17,13 @@ public class ResearcherM  extends ImakeXML implements Serializable {
 	private TitleM title; 
 	//private OrganizationExtM organization;//Integer organizationId; xx
 	private OrganizationM organization;//Integer organizationId; xx
+	/*
 	private String campusCode; 
 	private String deptCode;
 	private String institutionCode;  
 	private String workCode;
 	private String cardId;
+	*/
 	private String createdBy;
 	private Timestamp createdDate;
 	private String nameEng;
@@ -76,36 +78,7 @@ public class ResearcherM  extends ImakeXML implements Serializable {
 	public void setOrganization(OrganizationM organization) {
 		this.organization = organization;
 	}
-	public String getCampusCode() {
-		return campusCode;
-	}
-	public void setCampusCode(String campusCode) {
-		this.campusCode = campusCode;
-	}
-	public String getDeptCode() {
-		return deptCode;
-	}
-	public void setDeptCode(String deptCode) {
-		this.deptCode = deptCode;
-	}
-	public String getInstitutionCode() {
-		return institutionCode;
-	}
-	public void setInstitutionCode(String institutionCode) {
-		this.institutionCode = institutionCode;
-	}
-	public String getWorkCode() {
-		return workCode;
-	}
-	public void setWorkCode(String workCode) {
-		this.workCode = workCode;
-	}
-	public String getCardId() {
-		return cardId;
-	}
-	public void setCardId(String cardId) {
-		this.cardId = cardId;
-	}
+	 
 	public String getCreatedBy() {
 		return createdBy;
 	}
