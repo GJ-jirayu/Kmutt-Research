@@ -126,23 +126,28 @@ public class ResearcherMasterController {
         researcherMasterForm.getResearcherM().setUpdatedBy(user.getUserId() + "");
         Integer refId = null;
         command = "addEditView";
+        String successMessage="";
         if (mode != null) {
             if (mode.equals("add")) {
                 researcherMasterForm.getResearcherM().setCreatedBy(user.getUserId() + "");
                 researcherMasterForm.getResearcherM().setResearcherId(null);
                 refId = researchService.saveResearcherM(researcherMasterForm.getResearcherM());
+                successMessage="Save Success";
             } else if (mode.equals("edit")) {
                 refId = researchService.updateResearcherM(researcherMasterForm.getResearcherM());
+                successMessage="Update Success";
             } else if (mode.equals("deleteItems")) {
                 if (researcherMasterForm.getIds() != null && researcherMasterForm.getIds().length > 0) {
                     researchService.deleteItemsResearcherM(researcherMasterForm.getIds());
                 }
+                successMessage="Delete Success";
             } else {
                 command = "list";
             }
         }
 
         //}
+        model.addAttribute("successMessage", successMessage);
         response.setRenderParameter("action", command);
         if (mode.equals("add") || mode.equals("edit")) {
             response.setRenderParameter("researcherId", refId + "");
