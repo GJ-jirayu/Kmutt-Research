@@ -194,9 +194,21 @@ public class ResearchAjax {
         }
         return "aa";
     }
-
+    /*
+    public ImakeResultMessage listPosition2(String key) {
+    	System.out.println("listPosition2->"+key);
+    	System.out.println("researchService->"+researchService);
+         
+    	PositionM positionM = new PositionM();
+    	positionM.setKeySearch(key);
+        return researchService.searchPositionM(positionM);
+		 
+    }
+    */
     //public ImakeResultMessage listPosition(String queyr){
     public ImakeResultMessage listPosition(PositionM positionM) {
+    	//System.out.println("listPositionxxx->"+positionM);
+    	//System.out.println("researchService->"+researchService);
         /*PositionM positionM =new PositionM();
     	positionM.setKeySearch(queyr);*/
         return researchService.searchPositionM(positionM);
