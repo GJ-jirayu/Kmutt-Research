@@ -222,6 +222,8 @@ public class ResearchRepository {
                     + "or p.groupEng like '%" + keySearch.trim() + "%' ) ");
         }
         ArrayList transList = new ArrayList();
+        
+        System.out.println(sb.toString());
         Query query = entityManager.createQuery(
                 " select p from ResearchGroup p " + sb.toString(),
                 ResearchGroup.class);
@@ -782,8 +784,10 @@ public class ResearchRepository {
         if (keySearch != null && keySearch.trim().length() > 0) {
             sb.append(" where ( p.researcherCode like '%" + keySearch.trim()
                     + "%' or p.nameThai like '%" + keySearch.trim() + "%' "
+                    		 + " or p.surnameEng like '%" + keySearch.trim() + "%' "
+                    				 + "  or p.surnameThai like '%" + keySearch.trim() + "%' "
                     + "or p.nameEng like '%" + keySearch.trim() + "%' ) ");
-        }
+        } 
         ArrayList transList = new ArrayList();
         Query query = entityManager.createQuery(" select p from Researcher p "
                 + sb.toString(), Researcher.class).setFirstResult(0).setMaxResults(10);
