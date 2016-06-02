@@ -63,7 +63,7 @@ public class Researcher implements Serializable {
 	@JoinColumn(name="ORGANIZATION_ID")
 	private Organization organization;//Integer organizationId; xx
 	//private OrganizationExt organization;//Integer organizationId; xx
-
+	/*
 	@Column(name="CAMPUS_CODE")
 	private String campusCode; 
 	
@@ -78,7 +78,7 @@ public class Researcher implements Serializable {
 
 	@Column(name="CARD_ID")
 	private String cardId;
-
+	*/
 	@Column(name="CREATED_BY")
 	private String createdBy;
 
@@ -97,7 +97,7 @@ public class Researcher implements Serializable {
 	private String researcherCode;
 
 	@Column(name="SURNAME_ENG")
-	private String surnameEng;
+	private String surnameEng; 
 
 	@Column(name="SURNAME_THAI")
 	private String surnameThai;
@@ -157,7 +157,7 @@ public class Researcher implements Serializable {
 	public void setOrganization(Organization organization) {
 		this.organization = organization;
 	}
-
+	/*
 	public String getCampusCode() {
 		return campusCode;
 	}
@@ -197,7 +197,7 @@ public class Researcher implements Serializable {
 	public void setCardId(String cardId) {
 		this.cardId = cardId;
 	}
-
+*/
 	public String getCreatedBy() {
 		return createdBy;
 	}
