@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://getahead.org/dwr/dwr30.dtd">
+
+<dwr>
+
+	<allow>
+
+
+
+		<!-- intro - for the test on index.html -->
+		<create creator="new" javascript="ResearchAjax">
+			<param name="class" value="th.ac.kmutt.research.ajax.ResearchAjax" />
+		</create>
+
+		<!-- this is a bad idea for live, but can be useful in testing -->
+		<convert converter="exception" match="java.lang.Exception" />
+		<convert converter="bean" match="java.lang.StackTraceElement" />
+		<!-- <convert converter="bean" match="th.ac.kmutt.research.xstream.common.*"/> -->
+		<convert converter="bean"
+			match="th.ac.kmutt.research.xstream.common.Paging" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.xstream.common.ImakeResultMessage" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.xstream.common.FeedModel" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.xstream.common.ImakeMessage" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.xstream.common.ImakeXML" />
+
+		<convert converter="bean"
+			match="th.ac.kmutt.research.portal.model.UserPortalM" />
+
+
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.CopyrightCreatorM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.CopyrightDocumentM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.CopyrightM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.CountryM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.DocAssignMappingM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.DocTypeM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.FundingResourceM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.FundingResourceTypeM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.JournalPaperM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.JournalPapersConferenceM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.JournalPapersDocumentM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.JournalPapersJournalM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.JournalPapersQualityAssuranceM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.JournalPapersTypeM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.JournalPapersWriterM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.OrganizationExtM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.OrganizationM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.PatentCreatorM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.PatentDocumentM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.PatentEditDateM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.PatentFeePaymentM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.PatentInheritedM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.PatentM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.PatentRightholderM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.PositionM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.PublishLevelM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.PublishTypeM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearcherGroupM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.ResearcherM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.ResearchGroupM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearchGroupTranslationM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearchProjectDocumentM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearchProjectM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearchProjectPaymentM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearchProjectProgressM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearchProjectResearcherM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.ResearchProjectWithdrawM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.RewardCreatorM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.RewardDocumentM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.RewardM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.RoleM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.RoleTypeM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.TitleM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.UserM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.UtilizationDocumentM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.UtilizationM" />
+		<convert converter="bean"
+			match="th.ac.kmutt.research.model.UtilizationTypeM" />
+		<convert converter="bean" match="th.ac.kmutt.research.model.WorkTypeM" />
+
+		<convert converter="bean"
+			match="th.ac.kmutt.research.constant.AtomConstant" />
+		<convert converter="bean" match="PaggingConstant" />
+		<convert converter="bean" match="RouterConStant" />
+		<convert converter="bean" match="ServiceConstant" />
+
+
+	</allow>
+
+</dwr>

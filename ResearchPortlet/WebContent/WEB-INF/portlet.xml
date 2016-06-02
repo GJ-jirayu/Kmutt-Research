@@ -1,0 +1,467 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+
+<portlet-app version="2.0"
+             xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	         xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+	                             http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+<!--  
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd 
+								http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" 
+								version="2.0">
+								--> 
+      <portlet>
+      <portlet-name>Funding Resource</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/funding-resource-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/fundingSource</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>แหล่งทุน</title>
+      </portlet-info>
+   </portlet>
+    
+   <portlet>
+      <portlet-name>Researcher</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/researcher-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/researcher</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>ผู้วิจัย</title>
+      </portlet-info>
+   </portlet>
+ 
+    <portlet>
+      <portlet-name>Research Group</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/research-group-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/researchGroup</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>กลุ่มวิจัย</title>
+      </portlet-info>
+   </portlet>
+   <portlet>
+      <portlet-name>Position</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/position-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/position</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <resource-bundle>messages</resource-bundle>
+      <portlet-info>
+         <title>ตำแหน่ง</title>
+      </portlet-info>
+   </portlet>
+  
+  
+   <portlet>
+      <portlet-name>Country</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/country-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/country</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>ประเทศ</title>
+      </portlet-info>
+   </portlet>
+   
+   <portlet>
+      <portlet-name>JournalPapers Type</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/journal-papers-type-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/position</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>ประเภทบทความ</title>
+      </portlet-info>
+   </portlet>
+   <portlet>
+      <portlet-name>Funding Resource Type</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/funding-resource-type-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/fundingSourceType</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>ประเภทแหล่งทุน</title>
+      </portlet-info>
+   </portlet>
+   <portlet>
+      <portlet-name>Published Level</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/published-level-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/publishedLevel</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>ระดับการตีพิมพ์</title>
+      </portlet-info>
+   </portlet>
+   
+   <portlet>
+      <portlet-name>Published Type</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/published-type-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/publishedType</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>ชนิดการตีพิมพ์</title>
+      </portlet-info>
+   </portlet>
+   
+   <portlet>
+      <portlet-name>Work Type</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/work-type-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/country</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>ประเภทงาน</title>
+      </portlet-info>
+   </portlet>
+   
+    <portlet>
+      <portlet-name>Utilization Type</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/utilization-type-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/utilization</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>การนำไปใช้ประโยชน์</title>
+      </portlet-info>
+   </portlet>
+   
+     <portlet>
+      <portlet-name>Organization</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/organization-master-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/organization</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+        <!--  <title>บริษัท/องค์กร</title>  -->
+          <title>หน่วยงานภายใน</title> 
+      </portlet-info>
+   </portlet>
+   
+    <portlet> 
+      <portlet-name>Organization Ext</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/master/organization-ext-master-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>หน่วยงานนอก สทบ.</title>
+      </portlet-info>
+   </portlet>
+   
+   <!--  Docs -->
+   <portlet>
+      <portlet-name>Research Project</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/docs/research-project-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>โครงการวิจัย</title>
+      </portlet-info>
+   </portlet>
+ 
+   <portlet>
+      <portlet-name>Journal Papers Journal</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/docs/journal-papers-portlet.xml</value>
+      </init-param>
+       <init-param>
+            <name>pageInit</name>
+             <value>journalPapersList</value>
+      </init-param> 
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>บทความวิจัย (วารสาร)</title>
+      </portlet-info>
+   </portlet>
+   <portlet>
+      <portlet-name>Journal Papers Conference</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/docs/journal-papers-conference-portlet.xml</value>
+      </init-param>
+      
+     <init-param>
+            <name>pageInit</name>
+             <value>journalPapersConferenceList</value>
+      </init-param> 
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>บทความวิจัย (ประชุมวิชาการ)</title>
+      </portlet-info>
+   </portlet> 
+   <portlet>
+      <portlet-name>Utilization</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/docs/utilization-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>งานวิจัยที่นำไปใช้ประโยชน์</title>
+      </portlet-info>
+   </portlet>
+   
+   <portlet>
+      <portlet-name>Copyright</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/docs/research-copyright-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>ลิขสิทธิ์</title>
+      </portlet-info>
+   </portlet>
+ 
+    <portlet>
+      <portlet-name>Patent</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/docs/patent-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>สิ่งประดิษฐ์ / การออกแบบผลิตภัณฑ์</title>
+      </portlet-info>
+   </portlet>
+  
+   <portlet>
+      <portlet-name>Reward</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/docs/research-reward-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>นักวิจัย / หน่วยงานที่ได้รับรางวัล</title>
+      </portlet-info>
+   </portlet>
+   
+   <!--  Config Data  -->
+    <portlet> 
+      <portlet-name>Doctype</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/config/doctype-config-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>DcoType</title>
+      </portlet-info>
+   </portlet>
+  
+  <!--  Download Docs  
+    <portlet> 
+      <portlet-name>Download Form</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/download/doc-download-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      
+      <portlet-info>
+         <title>Docs Download</title>
+      </portlet-info>
+   
+   </portlet>
+  -->
+   <!--  -->
+   <!-- 
+      <portlet>
+      <portlet-name>Sidebar</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/sidebar-portlet.xml</value>
+      </init-param>
+      <init-param>
+            <name>pageMaster</name>
+             <value>master/organizationExt</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>         
+      </supports>
+      <portlet-info>
+         <title>โครงการวิจัย 2</title>
+      </portlet-info>
+
+      <security-role-ref>
+            <role-name>dataentry</role-name>
+       </security-role-ref>
+   		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		
+   </portlet>
+    -->
+</portlet-app>
