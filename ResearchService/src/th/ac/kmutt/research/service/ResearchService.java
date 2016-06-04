@@ -568,7 +568,8 @@ public interface ResearchService {
 
     @SuppressWarnings("rawtypes")
     public List searchTitle(Title persistentInstance, Paging pagging, String keySearch) throws DataAccessException;
-
+    public List searchAcademicTitle(Title persistentInstance, Paging pagging, String keySearch) throws DataAccessException;
+    
     public Integer checkUQResearchGroup(ResearchGroup transientInstance) throws DataAccessException;
 
     public Integer checkUQUtilizationType(UtilizationType transientInstance) throws DataAccessException;

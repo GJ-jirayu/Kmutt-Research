@@ -381,6 +381,7 @@ public class ServiceConstant {
 
     // TITLE
     public static final String TITLE_SEARCH = "searchTitle";
+    public static final String ACADEMIC_TITLE_SEARCH = "searchAcademicTitle";
     public static final String TITLE_SAVE = "saveTitle";
     public static final String TITLE_UPDATE = "updateTitle";
     public static final String TITLE_ITEMS_DELETE = "deleteTitleItems";

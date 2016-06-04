@@ -462,8 +462,14 @@ public class ResearchRepository {
                                    Paging pagging, String keySearch) throws DataAccessException {
         // TODO Auto-generated method stub
         StringBuffer sb = new StringBuffer("");
-
-
+/*
+        SELECT ORG_INSTITUTION_CODE
+        , ORG_NAME
+        FROM ORGANIZATION
+        where ORG_WORK_CODE in (SELECT DISTINCT ORG_INSTITUTION_CODE
+        FROM ORGANIZATION)
+        */
+        sb.append("where p.ORG_WORK_CODE in (SELECT DISTINCT ORG_INSTITUTION_CODE FROM ORGANIZATION)" );
         if (keySearch != null && keySearch.trim().length() > 0) {
 			/*sb.append(" where ( p.orgCampusCode like '%" + keySearch.trim()+ "%' "+
 				    " or p.orgDeptCode like '%"+ keySearch.trim() + "%' "+
@@ -472,8 +478,8 @@ public class ResearchRepository {
 					" or p.orgName like '%" + keySearch.trim()+ "%' "+
 				     ") ");*/
             //	sb.append(" where ( concat(p.orgCampusCode,p.orgDeptCode,p.orgInstitutionCode,p.orgWorkCode) like '%" + keySearch.trim()+ "%' "+
-            sb.append(" where ( concat(p.ORG_CAMPUS_CODE,p.ORG_INSTITUTION_CODE,p.ORG_DEPT_CODE,p.ORG_WORK_CODE) like '%" + keySearch.trim() + "%'  " +
-
+           // sb.append(" and ( concat(p.ORG_CAMPUS_CODE,p.ORG_INSTITUTION_CODE,p.ORG_DEPT_CODE,p.ORG_WORK_CODE) like '%" + keySearch.trim() + "%'  " +
+            sb.append(" and ( concat(p.ORG_INSTITUTION_CODE) like '%" + keySearch.trim() + "%'  " +
                     " or p.ORG_NAME like '%" + keySearch.trim() + "%' " +
                     ") ");
         }
@@ -2754,29 +2760,56 @@ public class ResearchRepository {
             throws DataAccessException {
         // TODO Auto-generated method stub
         return entityManager.find(Title.class, titleId);
-    }
-
+    } 
+    
     public List searchTitle(Title persistentInstance, Paging pagging,
                             String keySearch) throws DataAccessException {
         // TODO Auto-generated method stub
         StringBuffer sb = new StringBuffer("");
         if (keySearch != null && keySearch.trim().length() > 0) {
-            sb.append(" where ( p.academicTitleName like '%" + keySearch.trim()
-                    + "%' ) ");
+            sb.append(" where ( p.TITLE_NAME like '%" + keySearch.trim()
+                    + "%' or p.TITLE_CODE like '%" + keySearch.trim() + "%' ) ");
         }
         ArrayList transList = new ArrayList();
-        Query query = entityManager.createQuery(" select p from Title p "
-                + sb.toString(), Title.class);
+        Query query = entityManager.createNativeQuery(" select p.* from TITLE p "
+                + sb.toString()+" group by p.title_code  ", Title.class);
         query.setFirstResult((pagging.getPageNo() - 1) * pagging.getPageSize());
         query.setMaxResults(pagging.getPageSize());
         transList.add(query.getResultList());
 
-        query = entityManager.createQuery("select count(p) from Title p "
-                + sb.toString());
-        long count = (Long) query.getSingleResult();
+        query = entityManager.createNativeQuery("select count(*) from ( "
+        		+ "select count(*) from TITLE  p  "
+                + sb.toString()+" group by p.title_code "
+                		+ ") x");
+        java.math.BigInteger count = (java.math.BigInteger) query.getSingleResult();
         transList.add(String.valueOf(count));
         return transList;
     }
+    
+    public List searchAcademicTitle(Title persistentInstance, Paging pagging,
+            String keySearch) throws DataAccessException {
+    	// TODO Auto-generated method stub
+    	StringBuffer sb = new StringBuffer("");
+    	if (keySearch != null && keySearch.trim().length() > 0) {
+    			sb.append(" where ( p.ACADEMIC_TITLE_NAME like '%" + keySearch.trim()
+    			+ "%' or p.ACADEMIC_TITLE_CODE like '%" + keySearch.trim() + "%' ) ");
+    	}
+    	ArrayList transList = new ArrayList();
+    	Query query = entityManager.createNativeQuery(" select p.* from TITLE p "
+    			+ sb.toString()+" group by p.ACADEMIC_TITLE_CODE  ", Title.class);
+    	query.setFirstResult((pagging.getPageNo() - 1) * pagging.getPageSize());
+    	query.setMaxResults(pagging.getPageSize());
+    	transList.add(query.getResultList());
+
+    	query = entityManager.createNativeQuery("select count(*) from ( "
+    			+ " select count(*) from TITLE p "
+    			+ sb.toString()+" group by p.ACADEMIC_TITLE_CODE"
+    					+ " ) x ");
+    	java.math.BigInteger count = (java.math.BigInteger) query.getSingleResult();
+    	transList.add(String.valueOf(count));
+    	return transList;
+    }
+    
 
     public Integer saveJournalPapersJournal(
             JournalPapersJournal transientInstance) {

@@ -117,6 +117,25 @@ public class TitleResource extends BaseResource {
                                 imakeMessage.setResultListObj(models);
                                 return getRepresentation(entity, imakeMessage, xstream);
                             }
+                        }else if (serviceName.equals(ServiceConstant.ACADEMIC_TITLE_SEARCH)) {
+                            Paging page = xsource.getPaging();
+                            @SuppressWarnings("rawtypes")
+                            List result = (List) researchService.searchAcademicTitle(domain, page, xsource.getKeySearch());
+                            if (result != null && result.size() == 2) {
+                                java.util.ArrayList<Title> domains = (java.util.ArrayList<Title>) result
+                                        .get(0);
+                                String domains_size = (String) result.get(1);
+                                ImakeResultMessage imakeMessage = new ImakeResultMessage();
+
+                                List<TitleM> models = new ArrayList<TitleM>();
+                                if (domains_size != null && domains_size.length() != 0)
+                                    imakeMessage.setMaxRow(domains_size);
+                                if (domains != null && domains.size() > 0) {
+                                    models = getTitleModels(domains);
+                                }
+                                imakeMessage.setResultListObj(models);
+                                return getRepresentation(entity, imakeMessage, xstream);
+                            }
                         }
 
                     } else {

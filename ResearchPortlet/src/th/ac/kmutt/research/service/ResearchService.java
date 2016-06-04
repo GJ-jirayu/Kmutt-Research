@@ -358,6 +358,7 @@ public interface ResearchService {
 	public TitleM findTitleById(Integer researchGroupId)  ;
 	@SuppressWarnings("rawtypes")
 	public ImakeResultMessage searchTitleM(TitleM persistentInstance)  ;
+	public ImakeResultMessage searchAcademicTitleM(TitleM persistentInstance)  ;
 	
 	
 	public ResearchProjectDocumentM findResearchProjectDocumentById(

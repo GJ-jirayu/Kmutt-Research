@@ -3148,7 +3148,13 @@ public class ResearchServiceWSImpl extends PostCommon implements ResearchService
             return ((UtilizationM) imakeMessage.getResultListObj().get(0)).getUpdateRecord();
         else
             return null;
-    }
+    } 
+	@Override
+	public ImakeResultMessage searchAcademicTitleM(TitleM titleM) {
+		// TODO Auto-generated method stub
+		 	titleM.setServiceName(ServiceConstant.ACADEMIC_TITLE_SEARCH);
+	        return postMessage(titleM, titleM.getClass().getName(), "title", true);
+	}
 	
 	/*public Integer countJournalPapersWriter(JournalPapersWriterM transientInstance) {
 		return researchService.countJournalPapersWriter(transientInstance);	

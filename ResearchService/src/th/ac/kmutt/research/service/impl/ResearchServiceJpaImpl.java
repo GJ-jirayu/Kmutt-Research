@@ -1644,5 +1644,12 @@ public class ResearchServiceJpaImpl implements ResearchService {
         return researchRepository.updateFlagPatent(persistentInstance);
     }
 
+	@Override
+	public List searchAcademicTitle(Title persistentInstance, Paging paging, String keySearch)
+			throws DataAccessException {
+		// TODO Auto-generated method stub
+		  return researchRepository.searchAcademicTitle(persistentInstance, paging, keySearch);
+	}
+
 
 }

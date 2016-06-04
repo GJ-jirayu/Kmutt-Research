@@ -147,17 +147,23 @@
             </tr> 
              <tr>
               <td align="right" width="20%">
-                        <label><span>ประเภทผู้วิจัย:</span> 
+                        <label><span>ประเภทนักวิจัย:</span> 
                        </label>
               </td>
               <td width="80%" colspan="2">
                
                  <form:select path="researcherM.researcherTypeId" >
+                 <form:option value="1" label="บุคลากรที่มีในระบบ สทบ."/> 
+                 <form:option value="2" label="บุคลากรที่ไม่มีในระบบ สทบ."/> 
+                 <form:option value="3" label="นักศึกษา"/> 
+                 <form:option value="4" label="บุคคลภายนอก"/> 
+                 		<%-- 
 						 <form:option value="1" label="ข้าราชการ/พนักงาน"/>      
 						 <form:option value="2" label="ลูกจ้างโครงการที่ได้ผ่าน สทบ."/>      
 						 <form:option value="3" label="ลูกจ้างโครงการที่ไม่ได้ผ่าน สทบ"/>      
 						 <form:option value="4" label="บุคลลภายนอก มจธ."/>      
-						 <form:option value="5" label="นักศึกษา"/>                
+						 <form:option value="5" label="นักศึกษา"/>
+						  --%>                
                  </form:select>
                 <%-- 
               	 	<table border="0" style="width:100%">
@@ -441,7 +447,7 @@
     			  var modelM={
         		    		keySearch:request.term
         		    }	
-    			ResearchAjax.listTitle(modelM,{
+    			ResearchAjax.listAcademicTitle(modelM,{
     					callback:function(data){ 
     						data=data.resultListObj;
     						if(data!=null && data.length>0){
@@ -1348,7 +1354,7 @@
    	  		    		keySearch:keySearch,
    	  		    		paging:pageObj
    	  		    }	
-       	ResearchAjax.listTitle(academicTitleM,{
+       	ResearchAjax.listAcademicTitle(academicTitleM,{
    			callback:function(data){ 
    				var maxRow=data.maxRow;
    				var lastpage=data.lastpage;
