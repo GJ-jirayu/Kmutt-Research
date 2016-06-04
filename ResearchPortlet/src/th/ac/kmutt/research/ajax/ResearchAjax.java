@@ -228,7 +228,14 @@ public class ResearchAjax {
 		/*List<FundingResourceTypeM> fundingResourceTypes=researchService.searchFundingResourceTypeM(fundingResourceTypeM);
 		return fundingResourceTypes;*/
     }
-
+    //public ImakeResultMessage listTitle(String queyr){
+    public ImakeResultMessage listAcademicTitle(TitleM titleM) {
+    	/*TitleM titleM =new TitleM();
+    	titleM.setKeySearch(queyr);*/
+        return researchService.searchAcademicTitleM(titleM);
+		/*List<FundingResourceTypeM> fundingResourceTypes=researchService.searchFundingResourceTypeM(fundingResourceTypeM);
+		return fundingResourceTypes;*/
+    }
     public TitleM findTitleById(Integer researchGroupId) {
         return researchService.findTitleById(researchGroupId);
     }
