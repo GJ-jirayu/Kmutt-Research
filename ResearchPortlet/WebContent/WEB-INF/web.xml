@@ -6,7 +6,10 @@
   <listener>
     <listener-class>org.directwebremoting.servlet.DwrListener</listener-class>
   </listener>
- 
+ <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>research.root</param-value>
+    </context-param>
   <context-param>
     <param-name>log4jConfigLocation</param-name>
     <param-value>/WEB-INF/log4j.properties</param-value>
